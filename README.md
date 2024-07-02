@@ -16,3 +16,22 @@ python sync_previous_module.py previous-module-dir current-module-dir
 The files that will be synced are:
 
         minitorch/operators.py minitorch/module.py tests/test_module.py tests/test_operators.py project/run_manual.py
+
+
+
+# Training Results
+## Dataset : Simple
+<img src="plots/simple_points.png" width="50%">
+<img src="plots/simple_plot.png" width="50%">
+
+## Dataset : Diag
+<img src="plots/diag_points.png" width="50%">
+<img src="plots/diag_plot.png" width="50%">
+
+## Dataset : Circle
+<img src="plots/circle_points.png" width="50%">
+<img src="plots/circle_plot.png" width="50%">
+
+## Dataset : XOR
+<img src="plots/xor_points.png" width="50%">
+<img src="plots/xor_plot.png" width="50%">

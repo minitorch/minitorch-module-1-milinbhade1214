@@ -1,0 +1,3 @@
+pytest -m task0_0
+pytest tests/test_operators.py
+pytest tests/test_operators.py -k test_sum

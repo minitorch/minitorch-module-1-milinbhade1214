@@ -49,7 +49,7 @@ def neg(x: float) -> float:
     Returns:
         float: The negation of x.
     """
-    return -x
+    return -float(x)
 
 
 def lt(x: float, y: float) -> float:
@@ -118,6 +118,17 @@ def sigmoid(x: float) -> float:
     """
     return 1.0 / (1.0 + math.exp(-x)) if x >= 0 else math.exp(x) / (1.0 + math.exp(x))
 
+def exp(x: float) -> float:
+    """Exponential function.
+
+    Args:
+        x (float): A number.
+
+    Returns:
+        float: The exponential of x.
+    """
+    return math.exp(x)
+
 
 def relu(x: float) -> float:
     """Rectified Linear Unit function.
@@ -128,7 +139,15 @@ def relu(x: float) -> float:
     Returns:
         float: x if x is greater than 0, else 0.
     """
-    return x if x > 0 else 0
+    return float(x) if x > 0 else 0.0
+def log(x: float) -> float:
+    """Logarithm of x
+    Args:
+        x (float): a number
+    Returns:
+        float: log(x)
+    """
+    return math.log(x)
 
 
 def log_back(x: float, d: float) -> float:
@@ -180,6 +199,15 @@ def relu_back(x: float, d: float) -> float:
     """
     return d if x > 0 else 0
 
+def sigmoid_back(x: float, d: float) -> float:
+    """
+    Backward pass for Sigmoid
+    """
+    return sigmoid(x) * (1 - sigmoid(x)) * d
+
+def relu_back(x: float, d:float) -> float:
+    r"If :math:`f = relu` compute d :math:`d \times f'(x)`"
+    return d if x > 0 else 0.0
 
 # ## Task 0.3
 
